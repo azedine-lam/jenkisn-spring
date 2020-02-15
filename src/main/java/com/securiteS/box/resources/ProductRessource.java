@@ -36,7 +36,8 @@ public class ProductRessource {
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	@ApiOperation(value = "Find all products")
-	public ResponseEntity<List<Product>> getProducts(){		
+	public ResponseEntity<List<Product>> getProducts(){	
+		System.out.println();
 		return new ResponseEntity<>(service.getAllProduct(),HttpStatus.OK);		
 	}
 
