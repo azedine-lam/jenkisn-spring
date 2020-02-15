@@ -47,8 +47,8 @@ public class ProductRessource {
 	@ApiOperation("Get product by id")
 	public ResponseEntity<Product> getProductByID (
 			@PathParam("id") Long id) throws AppException {
-		 //Product Product = service.getProduct(id);
-		 return new ResponseEntity<Product>(service.getProduct(id),HttpStatus.OK);		
+		 Product product = service.getProduct(id);
+		 return new ResponseEntity<Product>(product,HttpStatus.OK);		
 	}
 	
 	
